@@ -1,7 +1,7 @@
 {
-  "name": "Wordpress Grid-Theme",
+  "name": "HealthSource",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wordpress Theme",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {

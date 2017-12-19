@@ -220,6 +220,8 @@ function hs_scripts() {
 
 	wp_enqueue_style( 'hs-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'hs-main', get_template_directory_uri() . '/css/main.min.css' );
+
 	wp_enqueue_script( 'hs-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 	wp_localize_script( 'hs-navigation', 'hsScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'hs'),
@@ -271,3 +273,8 @@ require get_template_directory() . '/inc/icon-functions.php';
  */
 require get_template_directory() . "/widgets/recent-comments.php";
 require get_template_directory() . "/widgets/recent-posts.php";
+
+
+//Load Plugin Dependency
+include_once( __DIR__ . '/vendor/autoload.php' );
+WP_Dependency_Installer::instance()->run( __DIR__ );
