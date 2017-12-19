@@ -46,7 +46,7 @@ function hs_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'hs' ),
-		'social' => esc_html__( 'Social Media Menu', 'hume' ),
+		'secondary' => esc_html__( 'Secondary', 'hs' ),
 	) );
 
 	/*
@@ -63,9 +63,10 @@ function hs_setup() {
 
 	// Add theme support for Custom Logo
 	add_theme_support( 'custom-logo', array(
-		'width' => 250,
-		'height' => 250,
-		'flex-width' => false,
+		'width' => 245,
+		'height' => 60,
+		'flex-height' => true,
+		'flex-width' => true,
 	));
 
 	// Add theme support for selective refresh for widgets.
@@ -85,67 +86,6 @@ function hs_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'hs_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'hs_content_width', 0 );
-
-
-/**
- * Register custom fonts.
- */
-function hs_fonts_url() {
-	$fonts_url = '';
-
-	/**
-	 * Translators: If there are characters in your language that are not
-	 * supported by Rubik and Roboto Mono translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$rubik = _x( 'on', 'Rubik font: on or off', 'hs' );
-	$roboto_mono = _x( 'on', 'Roboto Mono font: on or off', 'hs' );
-	$slabo = _x( 'on', 'Slabo 27px font: on or off', 'hs' );
-
-	$font_families = array();
-
-	if ( 'off' !== $rubik ) {
-		$font_families[] = 'Rubik:300,300i,400,400i';
-	}
-
-	if ( 'off' !== $roboto_mono ) {
-		$font_families[] = 'Roboto Mono:400,400i,700,700i';
-	}
-
-	if ( in_array( 'on', array($rubik, $roboto_mono) ) ) {
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return esc_url_raw( $fonts_url );
-}
-
-/**
- * Add preconnect for Google Fonts.
- *
- * @since Twenty Seventeen 1.0
- *
- * @param array  $urls           URLs to print for resource hints.
- * @param string $relation_type  The relation type the URLs are printed.
- * @return array $urls           URLs to print for resource hints.
- */
-function hs_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'hs-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
-		$urls[] = array(
-			'href' => 'https://fonts.gstatic.com',
-			'crossorigin',
-		);
-	}
-
-	return $urls;
-}
-add_filter( 'wp_resource_hints', 'hs_resource_hints', 10, 2 );
-
 
 
 /**
@@ -215,12 +155,10 @@ add_action( 'widgets_init', 'hs_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hs_scripts() {
-	// Enqueue Google Fonts:
-	wp_enqueue_style( 'hs-fonts', hs_fonts_url() );
-
-	wp_enqueue_style( 'hs-style', get_stylesheet_uri() );
-
+	
+	//Styles
 	wp_enqueue_style( 'hs-main', get_template_directory_uri() . '/css/main.min.css' );
+	wp_enqueue_style( 'hs-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 
 	wp_enqueue_script( 'hs-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 	wp_localize_script( 'hs-navigation', 'hsScreenReaderText', array(

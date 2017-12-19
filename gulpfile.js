@@ -12,7 +12,8 @@ uglify = require('gulp-uglify');
 
 var config = {
     sassDir: ['./sass/main.scss'],
-    sassOutputDir: './css/'
+    sassOutputDir: './css/',
+    sassWatch: './sass/**/*.scss'
 }
 
 //keeps gulp from crashing for scss errors & gives sass access to bootstrap
@@ -55,7 +56,7 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('watch', function() {
-    gulp.watch(config.sassDir, ['sass']);
+    gulp.watch(config.sassWatch, ['sass']);
     //gulp.watch(config.jsDir + '*.js', ['scripts']);
 });
 

@@ -1,94 +1,38 @@
 .site-header {
-	position: relative;
-	padding: 1em;
-	color: white;
-	background-color: $color__grey_black;
-	border-bottom: 1px solid $color__background-hr;
-
-	@media screen and (min-width: $query__small) {
-		padding: 1em 2em;
-	}
+	background-color: $color_white_back;
+	padding: 0px 1em;
 }
 
 .site-branding {
-	display: flex;
-	flex-direction: column;
+	background-color: $color_red;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	display: grid;
+	grid-template-rows: 3fr;
+}
+
+.logo-container {
+	grid-row: 1 / 2;
+	display: grid;
 	align-items: center;
-
-}
-
-.custom-logo-link {
-	display: block;
-	padding: 1em;
-
-	img {
-		display: block;
-		height: 95px;
-		width: auto;
-	}
-}
-
-.site-branding__text {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 65px;
-}
-
-.site-title {
-	margin: 0 0 .25em;
-	padding: 0;
-	font-size: 1.6em;
-	font-weight: 900;
-	line-height: 1em;
-
-	a {
-		color: white;
-		text-decoration: none;
-
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-	}
+	border-left: 1px solid $color_red;
+	border-right: 1px solid $color_red;
+	border-bottom: 1px solid $color_red;
+	text-align: center;
+	background-color: $color_white_back;
 }
 
 .site-description {
-	margin: 0 0 .25em;
-	font-size: .9em;
-	font-style: italic;
-	font-weight: 100;
-}
-
-
-@media screen and (min-width: $query__medium) {
-
-	@supports (grid-area: auto) {
-		.site-header {
-			display: flex;
-			flex-direction: column;
-			justify-content:flex-start;
-		}
-
-		.site-branding {
-			flex: 0 0 auto;
-		}
-
-		.site-branding:after {
-			margin-top: 1em;
-			content: "∞";
-		}
-	}
-
-	@supports (grid-area: auto) {
-		.site-header {
-			position: fixed;
-			width: 16.5em;
-			height: 100vh;
-			border-bottom: none;
-			overflow-y: auto;
-		}
-	}
+	margin: 0px;
+	font-size: .8em;
+	font-style: bold;
+	font-weight: 700;
+	color: $color_white_back;
+	background-color: $color_red;
+	padding: 10px 14px;
+	width: 100%;
+	text-align: center;
 }
 
 /*
