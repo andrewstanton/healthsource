@@ -1,9 +1,9 @@
-.site-main {
+.site-link-header, .site-search-header {
+    display: none;
 }
 
 @supports (grid-area: auto) {
-    @media screen and (min-width: $query__medium) {
-
+    @media screen and (min-width: $query__small) {
         .site {
             display: grid;
             grid-template-columns: 1fr minmax(1fr, auto);
@@ -18,35 +18,8 @@
             grid-area: banner;
         }
 
-        #header-grid {
-            display: grid;
-            grid-template-columns: 2fr 6fr;
-            grid-template-areas: "logo nav";
-            grid-column-gap: 1em;
-        }
-
         .site-branding {
             grid-area: logo;
-        }
-
-        .site-header-links {
-            grid-area: nav;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-column-gap: 2em;
-            grid-template-areas: 
-                "secnav search"
-                "mainnav mainnav";
-        }
-
-        .site-link-header {
-            grid-area: secnav;
-            align-self: center;
-        }
-
-        .site-search-header {
-            grid-area: search;
-            align-self: center;
         }
 
         .site-navigation-header {
@@ -79,6 +52,39 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
+        }
+
+    }
+
+    @media screen and (min-width: $query__medium) {
+
+        #header-grid {
+            display: grid;
+            grid-template-areas: "logo nav";
+            grid-template-columns: 2fr 6fr;
+            grid-column-gap: 1em;
+        }
+
+        .site-header-links {
+            grid-area: nav;
+            display: grid;
+            grid-column-gap: 2em;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: 
+            "secnav search"
+            "mainnav mainnav";
+        }
+
+        .site-search-header {
+            grid-area: search;
+            align-self: center;
+            display: block;
+        }
+
+        .site-link-header {
+            grid-area: secnav;
+            align-self: center;
+            display: block;
         }
 
         .banner-excerpt, .bottom-right {
