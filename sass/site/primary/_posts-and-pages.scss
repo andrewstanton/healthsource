@@ -12,6 +12,8 @@ body:not(.archive-view) {
 		@media screen and (min-width: $query__medium) {
 
 			.site-main {
+				min-height: 100px;
+				background-color: $color_white_back;
 			}
 
 			.post,

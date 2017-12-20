@@ -42,6 +42,7 @@ function hs_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'hs-index', 966, 555, true);
+	add_post_type_support( 'page', 'excerpt' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

@@ -15,27 +15,36 @@
 
 .logo-container {
 	align-items: center;
-	border-left: 1px solid $color_red;
-	border-right: 1px solid $color_red;
-	border-bottom: 1px solid $color_red;
 	text-align: center;
 	background-color: $color_white_back;
-	padding: 1.2em;
+	padding: 2.5em 1em 0.5em 1em;
 }
 
 .site-description {
 	margin: 0px;
-	font-size: .8em;
-	font-style: bold;
-	font-weight: 700;
-	color: $color_white_back;
-	background-color: $color_red;
-	padding: 10px 14px;
 	width: 100%;
 	text-align: center;
 	position: absolute;
 	bottom: -44px;
 	z-index: 1000;
+
+	a {
+		color: $color_white_back;
+		font-size: .8em;
+		font-style: bold;
+		font-weight: 700;
+		padding: 10px 14px;
+		display: block;
+		text-decoration: none;
+		background-color: $color_red;
+
+		&:hover, &:focus {
+			color: $color_white_back;
+			text-decoration: none;
+			background-color: lighten($color_red, 10%);
+		}
+	}
+
 }
 .site-link-header {
 	text-align: right;
@@ -45,7 +54,17 @@
 Search Input
 */
 .search-wrap {
-	
+	position: relative;
+
+	&::before {
+		content: "\f002";
+		font-family: FontAwesome;
+		position: absolute;
+		right: 15px;
+		top: 6px;
+		color: lighten($color_grey, 10%);
+	}
+
 	input[type=search] {
 		display: block;
 		border-radius: 0px;
@@ -53,6 +72,7 @@ Search Input
 		color: lighten($color_grey, 10%);
 		width: 100%;
 		padding: 10px 15px;
+		padding-right: 30px;
 		font-size: 0.8em;
 
 		transition: border-color ease-in-out .15s, color ease-in-out .15s;

@@ -5,6 +5,7 @@
 
 	ul {
 		display: flex;
+		flex-wrap: nowrap;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -12,6 +13,8 @@
 
 		li {
 			display: inline-block;
+			flex-grow: 1;
+			text-align: center;
 			
 			&:hover, 
 			&focus {
@@ -20,6 +23,10 @@
 					color: $color_white_back;
 				}
 			}
+		}
+
+		li:not(:first-child) {
+			border-right: 4px solid $color_white_back;
 		}
 
 		a {
@@ -46,6 +53,9 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		background-color: $color_red;
+		color: $color_white_back;
+		cursor: default;
 	}
 
 	.menu-item-has-children,

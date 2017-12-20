@@ -75,6 +75,29 @@
             grid-area: footer;
         }
 
+        .banner-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .banner-excerpt, .bottom-right {
+            grid-column: 3/4;
+            grid-row: 2/3;
+
+            &.bottom-left {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            &.top-right {
+                grid-column: 3/4;
+                grid-row: 1/2;
+                align-self: end;
+            }
+
+        }
+
+
     }
     @media screen and (min-width: $query__wide) { 
         #header-grid {

@@ -8,7 +8,7 @@
         -moz-box-shadow:    inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
         box-shadow:         inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     
-        padding: 1em 20%;
+        padding: 2em 20%;
     
         text-align: center;
 
@@ -18,13 +18,13 @@
         }
     }
 
-    h1, h2, h3, h4, h5, h6, h7, h8, h9, {
+    h1, h2, h3, h4, h5, h6, h7, h8, h9  {
         font-family: $font__main !important;
         margin-top: 0px !important;
         margin-bottom: 0.5em;
     }
 
-    p {
+    p, ul > li {
         font-family: $font__main !important;
         color: $color_black !important;
         font-size: 0.9em !important;
@@ -59,7 +59,7 @@
 
         div[data-element_type=column]:last-child {
             grid-area: image;
-            min-height: 300px;
+            min-height: 350px;
 
             .elementor-column-wrap {
                 padding: 0px !important;

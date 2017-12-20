@@ -9,8 +9,16 @@
 ?>
 <section class="content-banner" style="background-image: url('<?php echo $thumb_url; ?>');">
 
-    <div class="banner-excerpt">
-        <p><?php get_the_excerpt(); ?></p>
+    <?php if(has_excerpt()): ?>
+    <div class="banner-grid">
+        <div class="banner-excerpt">
+
+            <div class="excerpt-back">
+                <?php echo get_the_excerpt(); ?>
+            </div>
+        
+        </div>
     </div>
+    <?php endif ?>
 
 </section>
