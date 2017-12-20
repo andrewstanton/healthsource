@@ -1,34 +1,41 @@
 .site-footer {
 	position: relative;
-	padding: 1em;
+	padding-top: 4em;
+	padding-bottom: 3em;
 	color: #fff;
-	background-color: $color_white_back;
+	background-color: $color_footer_grey;
 	text-align: center;
+	
+	
+	.footer-nav {
+		ul {
+			padding: 0px;
+			margin: 0px;
+			
+			li {
+				list-style: none;
+				display: inline-block;
 
-	a {
-		font-weight: 700;
-		color: white;
-		text-decoration: none;
 
-		&:hover,
-		&:focus {
-			text-decoration: underline;
+				a {
+					font-weight: 700;
+					color: white;
+					text-decoration: none;
+					padding: 0px 0.8em;
+					&:hover,
+					&:focus {
+						text-decoration: underline;
+					}
+				}
+			}
 		}
+		
 	}
+	
 
-	@media screen and (min-width: $query__small) {
-		padding: 1em 2em;
-	}
-
-}
-
-.site-info {
-	margin: 1em 0 1em auto;
-	align-self: center;
-	font-size: 90%;
-
-	@media screen and (min-width: $query__medium) {
-		text-align: right;
+	.site-info {
+		padding-top: 2em;
+		font-size: 0.8em;
 	}
 }
 

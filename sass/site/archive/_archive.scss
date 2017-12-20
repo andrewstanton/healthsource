@@ -38,7 +38,6 @@
 @supports (grid-area: auto) {
     .archive-view .site-main {
         max-width: 40em;
-        padding: 1em;
     }
 
     @media screen and (min-width: $query__medium) {
@@ -46,7 +45,6 @@
 
             .site-main {
 				max-width: none;
-                padding: 8px;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 8px;
