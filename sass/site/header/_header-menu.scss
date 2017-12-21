@@ -2,15 +2,25 @@
 	font-family: $font__meta;
 	font-size: 90%;
 	clear: left;
-	
-	li {
-		position: relative;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-top: 1em;
+		padding-left: 0;
+
+		li {
+			position: relative;
+			margin: 0 1px 1px 0;
+			font-weight: bold;
+		}
 	}
 
 	a {
 		display: inline-block;
 		width: 100%;
-		padding: .5em 0;
+		padding: .5em 1em;
 		text-decoration: none;
 		color: $color__text-main;
 	}
@@ -46,6 +56,13 @@
 	span.fa {
 		margin-right: 0.5em;
 	}
+
+	&::before {
+		content: '\f054';
+		font-family: FontAwesome;
+		font-style: normal;
+		padding-right: 0.5em;
+	}
 }
 
 /* Toggle small menu and children on */
@@ -53,6 +70,13 @@
 .children.toggled-on,
 .sub-menu.toggled-on {
 	display: block;
+}
+.toggled-on .menu-toggle {
+	&::before {
+		content: '\f078';
+		font-family: FontAwesome;
+		font-style: normal;
+	}
 }
 
 #secondary-menu {
