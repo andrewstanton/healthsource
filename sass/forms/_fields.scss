@@ -31,3 +31,26 @@ select {
 textarea {
 	width: 100%;
 }
+
+.wpcf7 {
+	label {
+		color: $color_black;
+		font-weight: bold;
+		font-size: 0.9em;
+	}
+	input[type=text], input[type=email], select {
+		padding: 0.8em;
+		border-radius: 0;
+		border: $color_grey 1px solid;
+		width: 100%;
+		margin-bottom: 0.5em;
+		font-size: 1em;
+		color: $color_grey;
+
+		&:focus {
+			font-style: normal;
+			color: darken($color_grey, 30%);
+		}
+
+	}
+}

@@ -1,4 +1,4 @@
-.btn {
+.btn, input[type=submit].btn {
     display: inline-block;
     margin-bottom: 0; // For input.btn
     text-align: center;
@@ -70,6 +70,11 @@
         text-decoration: none;
       }
     }
+  }
+
+  input[type=submit].btn {
+    font-weight: bold;
+    padding: 1em 1em;
   }
   
   
