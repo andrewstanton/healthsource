@@ -53,4 +53,32 @@ textarea {
 		}
 
 	}
+	
+	input[type=submit].btn {
+		font-size: 1.1em;
+		background: #e60042;
+		background: -moz-linear-gradient(top, #e60042 0%, #b90236 100%);
+		background: -webkit-linear-gradient(top, #e60042 0%,#b90236 100%);
+		background: linear-gradient(to bottom, #e60042 0%,#b90236 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60042', endColorstr='#b90236',GradientType=0 );
+	}
+
+
+
+	div.wpcf7-response-output {
+		padding: 1em;
+		text-align: center;
+		color: $color_white_back;
+		margin: 0;
+	}
+
+	div.wpcf7-mail-sent-ok {
+		background-color: rgb(31, 168, 31);
+		border: none;
+	}
+	
+	div.wpcf7-mail-sent-ng, div.wpcf7-spam-blocked, div.wpcf7-validation-errors {
+		background-color: rgb(241, 50, 50);
+		border: none;
+	}
 }

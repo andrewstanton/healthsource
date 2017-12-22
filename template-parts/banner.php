@@ -1,10 +1,21 @@
-<?php
-if(has_post_thumbnail()):
-    $thumb_url = "";
-    $thumb_id = get_post_thumbnail_id();
-    $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-    $thumb_url = $thumb_url_array[0];
-?>
+<?php 
+$thumb_url = "";
+$thumb_id = get_post_thumbnail_id();
+$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+$thumb_url = $thumb_url_array[0];
+
+if(has_post_video()): ?>
+
+<section class="content-banner video-banner <?php if(!is_front_page()){ echo 'video-inner-banner';}?>">
+    <div class="video-back-blur" style="background-image: url('<?php echo $thumb_url; ?>')"></div>
+
+    <div class="video-container">
+        <?php echo get_the_post_video(get_the_ID(), 'full'); ?>
+    </div>
+
+</section>
+
+<?php else: ?>
 <section class="content-banner" style="background-image: url('<?php echo $thumb_url; ?>');">
 
     <?php if(has_excerpt()){ ?>
@@ -17,7 +28,7 @@ if(has_post_thumbnail()):
         
         </div>
     </div>
-<?php } ?>
+    <?php } ?>
 
 </section>
 

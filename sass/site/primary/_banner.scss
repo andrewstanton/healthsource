@@ -2,9 +2,80 @@
     height: 350px;
     background-size: cover;
     padding: 1em 3em;
-    background-color: $color_grey_section;
     background-position: center 10%;
 }
+.video-banner {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    height: inherit;
+
+    &.video-inner-banner {
+        max-height: 300px;
+        .video-container {
+            display: flex;
+            align-content: center;
+            .featured-video-plus {
+                width: 100%;
+            }
+        }
+    }
+
+    .video-back-blur {
+        position: absolute;
+        height: 110%;
+        width: 110%;
+        margin-top: -1%;
+        margin-left: -1%;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    
+        background-color: $color_grey;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .mejs-layers {
+        display: none;
+    }
+    .mejs-controls {
+        display: none;
+        top: 100%;
+    }
+
+    .video-container {
+        z-index: 100;
+        height: 100%;
+
+        .featured-video-plus {
+            position: relative;
+            display: block;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                border: 0;
+            }
+        }
+    }
+
+
+}
+
+
 .banner-grid {
     height: 100%;
 }
@@ -21,6 +92,39 @@
 @media screen and (min-width: $query__medium) {
     .content-banner {
         height: 450px;    
+    }
+    .content-banner.video-banner {
+        height: inherit;
+    }
+
+    .video-banner {
+        .video-container {
+            padding: 1em;
+            width: 70%;
+            max-width: 1000px;
+            margin: auto;
+
+            .featured-video-plus {
+                border: 10px solid $color_white_back;
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+                box-shadow:         0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            }
+        }
+        &.video-inner-banner {
+            max-height: 500px;
+
+            .video-container {
+                width: 100%;
+                padding: 0;
+                max-width: 100%;
+                
+                .featured-video-plus {
+                    border: none;
+                    box-shadow: none;
+                }
+            }       
+        }
     }
 }
 

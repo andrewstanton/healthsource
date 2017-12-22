@@ -14,5 +14,13 @@
     "uri": "https://wordpress.org/plugins/custom-post-type-ui/",
     "branch": "trunk",
     "optional": false
+  },
+  {
+    "name": "Featured Video Plus",
+    "host": "wordpress",
+    "slug": "featured-video-plus/featured-video-plus.php",
+    "uri": "https://plugins.svn.wordpress.org/featured-video-plus/",
+    "branch": "trunk",
+    "optional": true
   }
 ]
