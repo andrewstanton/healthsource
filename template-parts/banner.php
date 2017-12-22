@@ -15,7 +15,7 @@ if(has_post_video()): ?>
 
 </section>
 
-<?php else: ?>
+<?php elseif(has_post_thumbnail()): ?>
 <section class="content-banner" style="background-image: url('<?php echo $thumb_url; ?>');">
 
     <?php if(has_excerpt()){ ?>

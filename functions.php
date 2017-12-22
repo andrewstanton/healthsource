@@ -77,6 +77,15 @@ function hs_setup() {
 endif;
 add_action( 'after_setup_theme', 'hs_setup' );
 
+
+function wpshock_search_filter( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array('page') );
+    }
+    return $query;
+}
+add_filter('pre_get_posts','wpshock_search_filter');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

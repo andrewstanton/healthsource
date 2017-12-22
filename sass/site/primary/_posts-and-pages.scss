@@ -11,44 +11,6 @@
 	background-color: $color_white_back;
 }
 
-body:not(.archive-view) {
-
-	@supports (grid-area: auto) {
-		@media screen and (min-width: $query__medium) {
-
-			.post,
-			.page {
-				
-			}
-
-			.entry-header {
-			}
-
-			.entry-meta {
-			}
-
-			.featured-image {
-			}
-
-			.entry-content {
-			}
-
-			.entry-footer {
-			}
-
-			.post-navigation {
-			}
-
-			.comments-area {
-			}
-
-		}
-	}
-
-}
-
-
-
 .cat-links {
 	margin-bottom: .5em;
 	font-family: $font__meta;

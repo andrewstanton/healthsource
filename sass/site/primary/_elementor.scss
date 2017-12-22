@@ -1,6 +1,22 @@
 
 .elementor {
 
+    a.elementor-button-link, .elementor-button {
+        background-color: $color_red !important;
+        border: none !important;
+        color: $color_white_back !important;
+        border-radius: 0 !important;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($color_red, 10%) !important;
+            color: $color_white_back;
+            text-decoration: none;
+        }
+    }
+
+
     .red-text {
         color: $color_red;
     }

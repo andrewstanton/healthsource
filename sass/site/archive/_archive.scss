@@ -25,51 +25,88 @@
     .post,
     .page {
         padding: 1em;
-        &:after {
-            display: block;
-            margin: 4em 0;
-            width: 33.33%;
-            content: "";
-            border-bottom: 3px solid $color__grey_black;
+    }
+}
+
+.pages-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 0 1.5em;
+
+    article {
+        .featured-image {
+            max-height: 250px;
+            overflow: hidden;
+            img {
+            }
         }
+        .entry-content {
+            padding: 1em;
+            p {
+                font-style: initial;
+                font-size: 0.8em;
+            }
+        }
+        .entry-title {
+            padding: 0;
+            margin: 0 -0.5em 0 -0.5em;
+            a {
+                display: block;
+                font-size: 0.8em;
+                padding: 0.5em;
+                color: $color_white_back;
+                background: #e60042;
+                background: -moz-linear-gradient(top, #e60042 0%, #b90236 100%);
+                background: -webkit-linear-gradient(top, #e60042 0%,#b90236 100%);
+                background: linear-gradient(to bottom, #e60042 0%,#b90236 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60042', endColorstr='#b90236',GradientType=0 );
+                
+                &:hover {
+                    border: none;
+                    background: none;
+                    background-color: lighten($color_red, 10%);
+                }
+            }
+        }
+    }
+
+}
+.site-main {
+    max-width: none;
+    
+    h1, h2, h3, h4, h5, h6, h7,h8, h9 {
+        color: $color_red;
+    }
+    .none-header {
+        text-align: center;
     }
 }
 
 @supports (grid-area: auto) {
-    .archive-view .site-main {
-        max-width: 40em;
-    }
 
     @media screen and (min-width: $query__medium) {
+        .pages-grid-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            article {
+                .entry-title {
+                    a {
+                        padding: 1em; 
+                    }
+                }
+            }
+        }
+
         .archive-view {
 
             .site-main {
-				max-width: none;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 8px;
-                background: $color__grey_light;
-
-                @media screen and (min-width: $query__wide) {
-                    grid-template-columns: repeat(3, 1fr);
-                }
-
-                @media screen and (min-width: $query__x_wide) {
-                    grid-template-columns: repeat(4, 1fr);
-                }
-
-                @media screen and (min-width: $query__xx_wide) {
-                    grid-template-columns: repeat(5, 1fr);
-                }
+                max-width: none;
+                padding: 2em 0em;
             }
 
             .post,
             .page {
                 background: white;
-
-                &:after {
-                    display: none;
-                }
             }
 
             .category-featured {

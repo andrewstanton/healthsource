@@ -21,9 +21,8 @@ get_header(); ?>
 			?>
 		</header><!-- .page-header -->
 
+		
 		<?php
-
-		echo hs_get_the_archive_navigation( 'next' );
 		
 		/* Start the Loop */
 		while ( have_posts() ) : the_post();
@@ -35,15 +34,14 @@ get_header(); ?>
 			 */
 			get_template_part( 'template-parts/content', get_post_format() );
 
-		endwhile;
+		endwhile; ?>
+	
+		<?php 
+		else :
 
-		echo hs_get_the_archive_navigation( 'previous' );
+			get_template_part( 'template-parts/content', 'none' );
 
-	else :
-
-		get_template_part( 'template-parts/content', 'none' );
-
-	endif; ?>
+		endif; ?>
 
 	</main><!-- #main -->
 
