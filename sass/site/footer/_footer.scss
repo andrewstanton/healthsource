@@ -24,7 +24,8 @@
 				font-weight: 700;
 				color: white;
 				text-decoration: none;
-				padding: 0px 0.8em;
+				font-size: 0.9em;
+
 				&:hover,
 				&:focus {
 					text-decoration: underline;
@@ -48,6 +49,19 @@
 			li {
 				display: inline-block;
 				text-align: left;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $query__medium) {
+	.footer-nav {
+		ul {
+			li {
+				a {
+					font-size: 1em;
+					padding: 0px 0.8em;
+				}
 			}
 		}
 	}

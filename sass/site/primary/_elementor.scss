@@ -72,8 +72,6 @@
             "image"
             "text";
 
-            text-align: right !important;
-
             div[data-element_type=column] {
                 width: auto !important;
             }
@@ -361,6 +359,8 @@
                 grid-template-columns: 5fr 3fr;
                 grid-template-areas: "text image";
             
+                text-align: right !important;
+
                 div[data-element_type=column]:last-child {
                     min-height: 350px;
                 }
