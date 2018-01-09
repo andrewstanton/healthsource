@@ -76,3 +76,14 @@
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+
+/*--------------------------------------------------------------
+# Internet Explorer
+--------------------------------------------------------------*/
+@supports (-ms-accelerator:true) {
+	@import "ie";
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	@import "ie";
+}	

@@ -1,0 +1,26 @@
+.elementor {
+    .text-right-section {
+        .elementor-row {
+            display: -webkit-flex;
+            display: flex !important;
+            
+            div[data-element_type=column]{
+                width: inherit !important;
+            }
+        }
+    }
+    .text-left-section {
+        .elementor-row {
+            display: -webkit-flex;
+            display: flex !important;
+
+            div[data-element_type=column]{
+                width: inherit !important;
+            }
+        }
+    }
+}
+
+#header-grid {
+    display: flex;
+}
