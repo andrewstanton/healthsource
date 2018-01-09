@@ -13,6 +13,7 @@
 @media screen and (min-width: $query__medium) and (max-width: 1799px) {
 
 	.widget-area {
+		-js-display: flex;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -31,6 +32,7 @@
 @media screen and (min-width: $query__wide) {
 
 	/*.archive-view .widget-area {
+		-js-display: flex;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;

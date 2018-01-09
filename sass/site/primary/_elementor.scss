@@ -66,7 +66,28 @@
         background-color: $color_grey_section;
         
         .elementor-row {
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid !important;
+
+            -ms-grid-template-columns: 1fr;
+            -ms-grid-template-areas: 
+            "image"
+            "text";
+            -moz-grid-template-columns: 1fr;
+            -moz-grid-template-areas: 
+            "image"
+            "text";
+            -o-grid-template-columns: 1fr;
+            -o-grid-template-areas: 
+            "image"
+            "text";
+            -webkit-grid-template-columns: 1fr;
+            -webkit-grid-template-areas: 
+            "image"
+            "text";
+
             grid-template-columns: 1fr;
             grid-template-areas: 
             "image"
@@ -78,6 +99,11 @@
         }
 
         div[data-element_type=column]:last-child {
+            -ms-grid-area: image;
+            -moz-grid-area: image;
+            -o-grid-area: image;
+            -webkit-grid-area: image;
+
             grid-area: image;
             min-height: 200px;
 
@@ -89,6 +115,11 @@
         }
 
         div[data-element_type=column]:not(:last-child) {
+            -ms-grid-area: text;
+            -moz-grid-area: text;
+            -o-grid-area: text;
+            -webkit-grid-area: text;
+
             grid-area: text;
             
             .elementor-column-wrap {
@@ -100,7 +131,27 @@
     .text-right-section {
 
         .elementor-row {
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid !important;
+
+            -ms-grid-template-columns: 1fr;
+            -ms-grid-template-areas: 
+            "image"
+            "text";
+            -moz-grid-template-columns: 1fr;
+            -moz-grid-template-areas: 
+            "image"
+            "text";
+            -o-grid-template-columns: 1fr;
+            -o-grid-template-areas: 
+            "image"
+            "text";
+            -webkit-grid-template-columns: 1fr;
+            -webkit-grid-template-areas: 
+            "image"
+            "text";
             grid-template-columns: 1fr;
             grid-template-areas: 
             "image"
@@ -112,6 +163,11 @@
         }
 
         div[data-element_type=column]:first-child {
+            -ms-grid-area: image;
+            -moz-grid-area: image;
+            -o-grid-area: image;
+            -webkit-grid-area: image;
+
             grid-area: image;
             min-height: 200px;
 
@@ -123,6 +179,10 @@
         }
 
         div[data-element_type=column]:not(:first-child) {
+            -ms-grid-area: text;
+            -moz-grid-area: text;
+            -o-grid-area: text;
+            -webkit-grid-area: text;
             grid-area: text;
             
             .elementor-column-wrap {
@@ -160,7 +220,28 @@
 
     .half-text-left-section {
         .elementor-row {
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid !important;
+
+            -ms-grid-template-columns: 1fr;
+            -ms-grid-template-areas: 
+            "image"
+            "text";
+            -moz-grid-template-columns: 1fr;
+            -moz-grid-template-areas: 
+            "image"
+            "text";
+            -o-grid-template-columns: 1fr;
+            -o-grid-template-areas: 
+            "image"
+            "text";
+            -webkit-grid-template-columns: 1fr;
+            -webkit-grid-template-areas: 
+            "image"
+            "text";
+
             grid-template-columns: 1fr;
             grid-template-areas: 
             "image"
@@ -172,6 +253,12 @@
         }
 
         div[data-element_type=column]:last-child {
+
+            -ms-grid-area: image;
+            -moz-grid-area: image;
+            -o-grid-area: image;
+            -webkit-grid-area: image;
+
             grid-area: image;
             min-height: 300px;
             .elementor-column-wrap {
@@ -182,6 +269,11 @@
         }
 
         div[data-element_type=column]:not(:last-child) {
+            -ms-grid-area: text;
+            -moz-grid-area: text;
+            -o-grid-area: text;
+            -webkit-grid-area: text;
+
             grid-area: text;
             .elementor-column-wrap {
                 padding: 0 0 2em 0;
@@ -191,7 +283,28 @@
 
     .half-text-right-section {
         .elementor-row {
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid !important;
+
+            -ms-grid-template-columns: 1fr;
+            -ms-grid-template-areas: 
+            "image"
+            "text";
+            -moz-grid-template-columns: 1fr;
+            -moz-grid-template-areas: 
+            "image"
+            "text";
+            -o-grid-template-columns: 1fr;
+            -o-grid-template-areas: 
+            "image"
+            "text";
+            -webkit-grid-template-columns: 1fr;
+            -webkit-grid-template-areas: 
+            "image"
+            "text";
+
             grid-template-columns: 1fr;
             grid-template-areas: 
             "image"
@@ -203,6 +316,11 @@
         }
 
         div[data-element_type=column]:first-child {
+            -ms-grid-area: image;
+            -moz-grid-area: image;
+            -o-grid-area: image;
+            -webkit-grid-area: image;
+
             grid-area: image;
             min-height: 300px;
             .elementor-column-wrap {
@@ -213,6 +331,11 @@
         }
 
         div[data-element_type=column]:not(:first-child) {
+            -ms-grid-area: text;
+            -moz-grid-area: text;
+            -o-grid-area: text;
+            -webkit-grid-area: text;
+
             grid-area: text;
             .elementor-column-wrap {
                 padding: 0 0 2em 0;
@@ -224,6 +347,9 @@
     .contact-section {
             
         .elementor-row {
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid !important;
             grid-template-columns: 1fr;
             grid-template-areas: 
@@ -236,12 +362,20 @@
         }
 
         div[data-element_type=column]:first-child {
+            -ms-grid-area: image;
+            -moz-grid-area: image;
+            -o-grid-area: image;
+            -webkit-grid-area: image;
+
             grid-area: image;
             min-height: 400px;
             .elementor-column-wrap {
                 padding: 0px !important;
                 background-repeat: no-repeat;
                 background-size: cover;
+                display: -ms-grid;
+                display: -moz-grid;
+                display: -o-grid;
                 display: grid;
                 align-content: end;
             }
@@ -265,6 +399,10 @@
         }
 
         div[data-element_type=column]:not(:first-child) {
+            -ms-grid-area: text;
+            -moz-grid-area: text;
+            -o-grid-area: text;
+            -webkit-grid-area: text;
             grid-area: text;
             .elementor-column-wrap {
                 padding: 1em;

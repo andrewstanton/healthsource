@@ -8,7 +8,16 @@
 	max-width: 400px;
 	margin: auto;
 	background-color: $color_red;
+	display: -ms-grid;
+    display: -moz-grid;
+    display: -o-grid;
 	display: grid;
+
+	-ms-grid-template-rows: 3fr;
+	-moz-grid-template-rows: 3fr;
+	-o-grid-template-rows: 3fr;
+	-webkit-grid-template-rows: 3fr;
+
 	grid-template-rows: 3fr;
 	position: relative;
 	border-left: 1px solid $color_red;

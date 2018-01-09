@@ -109,7 +109,16 @@
 
 		ul {
 			padding-top: 1em;
+			display: -ms-grid;
+			display: -moz-grid;
+			display: -o-grid;
 			display: grid;
+			
+			-ms-grid-template-columns: 1fr 1fr 1fr;
+			-moz-grid-template-columns: 1fr 1fr 1fr;
+			-o-grid-template-columns: 1fr 1fr 1fr;
+			-webkit-grid-template-columns: 1fr 1fr 1fr;
+
 			grid-template-columns: 1fr 1fr 1fr;
 			list-style: none;
 			margin: 0;
@@ -145,6 +154,7 @@
 		ul {
 			padding-top: 0;
 			justify-content: space-between;
+			-js-display: flex;
 			display: flex;
 			flex-wrap: nowrap;
 

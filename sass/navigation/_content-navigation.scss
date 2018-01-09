@@ -36,6 +36,7 @@
 @media screen and (min-width: $query__small) {
 
 	.nav-links {
+		-js-display: flex;
 		display: flex;
 		justify-content: space-between;
 		align-items: stretch;
@@ -48,6 +49,7 @@
 		.nav-previous,
 		.nav-next {
 			float: left;
+			-js-display: flex;
 			display: flex;
 			align-items: stretch;
 			width: 48%;
@@ -69,6 +71,7 @@
 	@media screen and (min-width: $query__medium) {
 
 		.posts-navigation {
+			-js-display: flex;
 			display: flex;
 			width: 100%;
 			margin: 0;
@@ -76,6 +79,7 @@
 		}
 
 		.nav-links {
+			-js-display: flex;
 			display: flex;
 			width: 100%;
 		}
@@ -95,6 +99,7 @@
 		}
 
 		.nav-previous .nav-links a {
+			-js-display: flex;
 			display: flex;
 			justify-content: flex-end;
 			align-items: flex-end;

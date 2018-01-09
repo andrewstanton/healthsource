@@ -2,12 +2,31 @@
     display: none;
 }
 .banner-grid {
+    display: -ms-grid;
+    display: -moz-grid;
+    display: -o-grid;
     display: grid;
+    -ms-grid-template-columns: 1fr 1fr;
+    -ms-grid-template-rows: 1fr 1fr;
+    -moz-grid-template-columns: 1fr 1fr;
+    -moz-grid-template-rows: 1fr 1fr;
+    -o-grid-template-columns: 1fr 1fr;
+    -o-grid-template-rows: 1fr 1fr;
+    -webkit-grid-template-columns: 1fr 1fr;
+    -webkit-grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
 .banner-excerpt {
+    -ms-grid-row: 2/3;
+    -ms-grid-column: 1/3;
+    -moz-grid-row: 2/3;
+    -moz-grid-column: 1/3;
+    -o-grid-row: 2/3;
+    -o-grid-column: 1/3;
+    -webkit-grid-row: 2/3;
+    -webkit-grid-column: 1/3;
     grid-row: 2/3;
     grid-column: 1/3;
     align-self: end;
@@ -16,8 +35,35 @@
 @supports (grid-area: auto) {
     @media screen and (min-width: $query__small) {
         .site {
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid;
+            -ms-grid-template-columns: 1fr 1fr;
+            -moz-grid-template-columns: 1fr 1fr;
+            -o-grid-template-columns: 1fr 1fr;
+            -webkit-grid-template-columns: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
+            -ms-grid-template-areas:
+                "header header"
+                "banner banner"
+                "main main"
+                "footer footer";
+            -moz-grid-template-areas:
+                "header header"
+                "banner banner"
+                "main main"
+                "footer footer";
+            -o-grid-template-areas:
+                "header header"
+                "banner banner"
+                "main main"
+                "footer footer";
+            -webkit-grid-template-areas:
+                "header header"
+                "banner banner"
+                "main main"
+                "footer footer";
             grid-template-areas:
                 "header header"
                 "banner banner"
@@ -26,36 +72,71 @@
         }
 
         .content-banner {
+            -ms-grid-area: banner;
+            -moz-grid-area: banner;
+            -o-grid-area: banner;
+            -webkit-grid-area: banner;
             grid-area: banner;
         }
 
         .site-branding {
+            -ms-grid-area: logo;
+            -moz-grid-area: logo;
+            -o-grid-area: logo;
+            -webkit-grid-area: logo;
             grid-area: logo;
         }
 
         .site-navigation-header {
+            -ms-grid-area: mainnav;
+            -moz-grid-area: mainnav;
+            -o-grid-area: mainnav;
+            -webkit-grid-area: mainnav;
             grid-area: mainnav;
             align-self: end;
         }
 
         .logo-container {
+            -ms-grid-row: 1 / 2;
+            -moz-grid-row: 1 / 2;
+            -o-grid-row: 1 / 2;
+            -webkit-grid-row: 1 / 2;
             grid-row: 1 / 2;
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid;
         }
 
         .site-header {
+            -ms-grid-area: header;
+            -moz-grid-area: header;
+            -o-grid-area: header;
+            -webkit-grid-area: header;
             grid-area: header;
         }
 
         .site-main {
+            -ms-grid-area: main;
+            -moz-grid-area: main;
+            -o-grid-area: main;
+            -webkit-grid-area: main;
             grid-area: main;
         }
 
         .widget-area {
+            -ms-grid-area: sidebar;
+            -moz-grid-area: sidebar;
+            -o-grid-area: sidebar;
+            -webkit-grid-area: sidebar;
             grid-area: sidebar;
         }
 
         .site-footer {
+            -ms-grid-area: footer;
+            -moz-grid-area: footer;
+            -o-grid-area: footer;
+            -webkit-grid-area: footer;
             grid-area: footer;
         }
 
@@ -64,20 +145,75 @@
     @media screen and (min-width: $query__medium) {
 
         .banner-grid {
+            -ms-grid-template-columns: 1fr 1fr 1fr;
+            -ms-grid-template-rows: 1fr 1fr;
+            -moz-grid-template-columns: 1fr 1fr 1fr;
+            -moz-grid-template-rows: 1fr 1fr;
+            -o-grid-template-columns: 1fr 1fr 1fr;
+            -o-grid-template-rows: 1fr 1fr;
+            -webkit-grid-template-columns: 1fr 1fr 1fr;
+            -webkit-grid-template-rows: 1fr 1fr;
+
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
         }
 
         #header-grid {
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid;
+
+            -ms-grid-template-areas: "logo nav";
+            -ms-grid-template-columns: 2fr 6fr;
+            -ms-grid-column-gap: 1em;
+            -moz-grid-template-areas: "logo nav";
+            -moz-grid-template-columns: 2fr 6fr;
+            -moz-grid-column-gap: 1em;
+            -o-grid-template-areas: "logo nav";
+            -o-grid-template-columns: 2fr 6fr;
+            -o-grid-column-gap: 1em;
+            -webkit-grid-template-areas: "logo nav";
+            -webkit-grid-template-columns: 2fr 6fr;
+            -webkit-grid-column-gap: 1em;
+
             grid-template-areas: "logo nav";
             grid-template-columns: 2fr 6fr;
             grid-column-gap: 1em;
         }
 
         .site-header-links {
+            -ms-grid-area: nav;
+            -moz-grid-area: nav;
+            -o-grid-area: nav;
+            -webkit-grid-area: nav;
             grid-area: nav;
+            display: -ms-grid;
+            display: -moz-grid;
+            display: -o-grid;
             display: grid;
+
+            -ms-grid-column-gap: 2em;
+            -ms-grid-template-columns: 2fr 1fr;
+            -ms-grid-template-areas: 
+            "secnav search"
+            "mainnav mainnav";
+            -moz-grid-column-gap: 2em;
+            -moz-grid-template-columns: 2fr 1fr;
+            -moz-grid-template-areas: 
+            "secnav search"
+            "mainnav mainnav";
+            -o-grid-column-gap: 2em;
+            -o-grid-template-columns: 2fr 1fr;
+            -o-grid-template-areas: 
+            "secnav search"
+            "mainnav mainnav";
+            -webkit-grid-column-gap: 2em;
+            -webkit-grid-template-columns: 2fr 1fr;
+            -webkit-grid-template-areas: 
+            "secnav search"
+            "mainnav mainnav";
+
             grid-column-gap: 2em;
             grid-template-columns: 2fr 1fr;
             grid-template-areas: 
@@ -86,26 +222,61 @@
         }
 
         .site-search-header {
+            -ms-grid-area: search;
+            -moz-grid-area: search;
+            -o-grid-area: search;
+            -webkit-grid-area: search;
             grid-area: search;
             align-self: center;
             display: block;
         }
 
         .site-link-header {
+            -ms-grid-area: secnav;
+            -moz-grid-area: secnav;
+            -o-grid-area: secnav;
+            -webkit-grid-area: secnav;
             grid-area: secnav;
             align-self: center;
             display: block;
         }
 
         .banner-excerpt, .bottom-right {
+            -ms-grid-column: 3/4;
+            -ms-grid-row: 2/3;
+            -moz-grid-column: 3/4;
+            -moz-grid-row: 2/3;
+            -o-grid-column: 3/4;
+            -o-grid-row: 2/3;
+            -webkit-grid-column: 3/4;
+            -webkit-grid-row: 2/3;
+
             grid-column: 3/4;
             grid-row: 2/3;
 
             &.bottom-left {
+                -ms-grid-column: 1/2;
+                -ms-grid-row: 2/3;
+                -moz-grid-column: 1/2;
+                -moz-grid-row: 2/3;
+                -o-grid-column: 1/2;
+                -o-grid-row: 2/3;
+                -webkit-grid-column: 1/2;
+                -webkit-grid-row: 2/3;
+
                 grid-column: 1/2;
                 grid-row: 2/3;
             }
             &.top-right {
+                -ms-grid-column: 3/4;
+                -ms-grid-row: 1/2;
+                -moz-grid-column: 3/4;
+                -moz-grid-row: 1/2;
+                -o-grid-column: 3/4;
+                -o-grid-row: 1/2;
+                -webkit-grid-column: 3/4;
+                -webkit-grid-row: 1/2;
+
                 grid-column: 3/4;
                 grid-row: 1/2;
                 align-self: end;
@@ -117,6 +288,11 @@
     }
     @media screen and (min-width: $query__wide) { 
         #header-grid {
+            -ms-grid-template-columns: 300px auto;
+            -moz-grid-template-columns: 300px auto;
+            -o-grid-template-columns: 300px auto;
+            -webkit-grid-template-columns: 300px auto;
+
             grid-template-columns: 300px auto;
         }
     }

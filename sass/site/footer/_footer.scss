@@ -9,7 +9,20 @@
 	
 .footer-nav {
 	ul {
+		display: -ms-grid;
+		display: -moz-grid;
+		display: -o-grid;
 		display: grid;
+		
+		-ms-grid-template-columns: 1fr 1fr;
+		-ms-grid-gap: 0.5em;
+		-moz-grid-template-columns: 1fr 1fr;
+		-moz-grid-gap: 0.5em;
+		-o-grid-template-columns: 1fr 1fr;
+		-o-grid-gap: 0.5em;
+		-webkit-grid-template-columns: 1fr 1fr;
+		-webkit-grid-gap: 0.5em;
+
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 0.5em;
 		padding: 0px;
