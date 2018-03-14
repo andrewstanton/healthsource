@@ -1,6 +1,26 @@
 
 .elementor {
 
+    .red-section {
+        a.elementor-button-link, .elementor-button {
+            background-color: #FFF !important;
+            border: none !important;
+            color: $color_red !important;
+            border-radius: 0 !important;
+            cursor: pointer;
+    
+            &:hover,
+            &:focus {
+                background-color: #FFF !important;
+                color: $color_red;
+                text-decoration: none;
+                -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+                -moz-box-shadow:    0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+                box-shadow:         0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
     a.elementor-button-link, .elementor-button {
         background-color: $color_red !important;
         border: none !important;
