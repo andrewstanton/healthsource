@@ -99,6 +99,21 @@ function hs_content_width() {
 add_action( 'after_setup_theme', 'hs_content_width', 0 );
 
 
+/*
+ * Tracking Code
+ */
+function custom_content_after_body_open_tag() {
+    ?>
+	
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFJWM7G"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+    
+	<?php
+}
+add_action('after_body_open_tag', 'custom_content_after_body_open_tag');
+
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
  * for content images.

@@ -36,6 +36,13 @@
         }
     }
 
+    .btn-large {
+        a.elementor-button-link, .elementor-button {
+            font-size: 18px;
+            padding: 1em 1.6em;
+        }
+    }
+
 
     .red-text {
         color: $color_red;
@@ -55,6 +62,10 @@
 
         h1, h2, h3, h4, h5, h6, h7, h8, h9, p {
             color: $color_white_back !important;
+        }
+
+        &.no-padding {
+            padding: 0;
         }
     }
 
