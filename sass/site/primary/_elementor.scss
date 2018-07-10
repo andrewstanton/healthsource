@@ -20,6 +20,26 @@
             }
         }
     }
+    
+    .purple-section {
+        a.elementor-button-link, .elementor-button {
+            background-color: #FFF !important;
+            border: none !important;
+            color: $color_purple !important;
+            border-radius: 0 !important;
+            cursor: pointer;
+    
+            &:hover,
+            &:focus {
+                background-color: #FFF !important;
+                color: $color_purple;
+                text-decoration: none;
+                -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+                -moz-box-shadow:    0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+                box-shadow:         0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
 
     a.elementor-button-link, .elementor-button {
         background-color: $color_red !important;
@@ -48,7 +68,7 @@
         color: $color_red;
     }
 
-    .red-section {
+    .red-section, .purple-section {
         background-color: $color_red;
         color: $color_white_back;
         -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -67,6 +87,10 @@
         &.no-padding {
             padding: 0;
         }
+    }
+
+    .purple-section {
+        background-color: $color_purple;
     }
 
     h1, h2, h3, h4, h5, h6, h7, h8, h9  {
@@ -447,15 +471,20 @@
     .call-to-action {
         padding: 3em 0px;
 
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e60042+0,bb0237+99 */
-        background: #e60042; /* Old browsers */
-        background: -moz-linear-gradient(top, #e60042 0%, #bb0237 99%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #e60042 0%,#bb0237 99%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #e60042 0%,#bb0237 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60042', endColorstr='#bb0237',GradientType=0 ); /* IE6-9 */
+        /*background: #e60042
+        background: -moz-linear-gradient(top, #e60042 0%, #bb0237 99%);
+        background: -webkit-linear-gradient(top, #e60042 0%,#bb0237 99%);
+        background: linear-gradient(to bottom, #e60042 0%,#bb0237 99%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60042', endColorstr='#bb0237',GradientType=0 ); */
     
+        background: #9392aa;
+        background: -moz-linear-gradient(top, #9392aa 0%, #696e9f 100%); 
+        background: -webkit-linear-gradient(top, #9392aa 0%,#696e9f 100%);
+        background: linear-gradient(to bottom, #9392aa 0%,#696e9f 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9392aa', endColorstr='#696e9f',GradientType=0 );
+
         text-align: center;
-        border-bottom: 8px solid $color_red_dark;
+        border-bottom: 8px solid darken($color_purple, 20%);
 
         a.btn {
             background: none !important;
@@ -468,7 +497,8 @@
             transition: box-shadow ease-in-out .15s, background-color ease-in-out .15s;
 
             &:hover, &:focus {
-                background-color: lighten($color_red, 10%) !important;
+                /*background-color: lighten($color_red, 10%) !important;*/
+                background-color: lighten($color_purple, 10%) !important;
                 color: $color_white_back;
                 text-decoration: none;
                 -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
@@ -517,7 +547,7 @@
 
 @media screen and (min-width: $query__medium) {
     .elementor {
-        .red-section {
+        .red-section, .purple-section {
             padding-left: 20%;
             padding-right: 20%;
         }
